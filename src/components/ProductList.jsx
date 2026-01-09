@@ -11,10 +11,10 @@ function ProductList() {
   return (
     <div className="product-list">
       <h2 id="Heading">ShoppyGlobe</h2>
-      <div className="product-display">
+
+      <div className="products-grid">
         {data.map((product) => (
           <div key={product.id} className="product-card">
-            {/*Using map function to display the products from fetched data*/}
             <img
               src={product.thumbnail}
               alt={product.title}
@@ -22,7 +22,7 @@ function ProductList() {
             />
             <h3 className="title">{product.title}</h3>
             <h3 className="category">{product.category}</h3>
-            <h3 className="price">{product.price}</h3>
+            <h3 className="price">${product.price}</h3>
             <h4 className="description">{product.description}</h4>
           </div>
         ))}
