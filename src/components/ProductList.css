@@ -8,11 +8,3 @@
 #Heading {
   font-size: 45px;
 }
-
-.products {
-  list-style: none;
-  display: flex;
-  flex-direction: row;
-  gap: 20px;
-  font-size: 25px;
-}

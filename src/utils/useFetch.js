@@ -18,7 +18,7 @@ function useFetch(URL) {
         const result = await response.json();
         setData(result.products);
       } catch (err) {
-        setError(`Failed to fetch the products ${err}`);
+        setError(`Failed to fetch the products ${err.message}`);
       } finally {
         setLoading(false);
       }
