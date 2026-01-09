@@ -1,4 +1,5 @@
 import useFetch from "../utils/useFetch";
+import { Link } from "react-router-dom";
 import "./ProductList.css";
 
 function ProductList() {
@@ -12,9 +13,13 @@ function ProductList() {
     <div className="product-list">
       <h2 id="Heading">ShoppyGlobe</h2>
 
-      <div className="products-grid">
+      <div className="products-grid">{/*Using link so that the product is clickable*/}
         {data.map((product) => (
-          <div key={product.id} className="product-card">
+          <Link
+            to={`/product/${product.id}`}
+            key={product.id}
+            className="product-card"
+          >
             <img
               src={product.thumbnail}
               alt={product.title}
@@ -24,7 +29,7 @@ function ProductList() {
             <h3 className="category">{product.category}</h3>
             <h3 className="price">${product.price}</h3>
             <h4 className="description">{product.description}</h4>
-          </div>
+          </Link>
         ))}
       </div>
     </div>
