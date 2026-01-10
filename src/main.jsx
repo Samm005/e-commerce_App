@@ -9,7 +9,7 @@ import ProductDetail from "./components/ProductDetail.jsx";
 import Cart from "./components/Cart.jsx";
 import Checkout from "./components/Checkout.jsx";
 import NotFound from "./components/NotFound.jsx";
-import { store } from "./redux/store";
+import { store } from "./utils/store";
 
 const approutes = createBrowserRouter([
   {
