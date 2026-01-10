@@ -1,0 +1,146 @@
+:root {
+  background: linear-gradient(
+    278deg,
+    rgba(227, 23, 98, 1) 0%,
+    rgb(93, 140, 199) 40%,
+    rgb(1, 28, 60) 100%
+  );
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -40%) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+.err-data {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: fadeUp 0.8s ease-in 1s;
+  animation-fill-mode: both;
+  height: 300px;
+  width: 900px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: rgb(214, 203, 95);
+  border-radius: 20px;
+  gap: 5px;
+}
+
+#error {
+  margin: 0;
+  font-size: 40px;
+  color: #ff0000;
+}
+
+#status {
+  font-size: 30px;
+  color: #ff0000;
+  font-weight: bold;
+}
+
+#final {
+  font-size: 35px;
+  margin: 0;
+  color: blue;
+}
+
+#home-link {
+  font-size: 35px;
+  padding: 3px;
+  margin-bottom: 7px;
+  color: darkgreen;
+  border: 2px dashed black;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+#home-link:hover {
+  color: red;
+  transform: scale(0.9);
+  border-radius: 10px;
+}
+
+@media (max-width: 1024px) {
+  .err-data {
+    width: 80%;
+    height: auto;
+    padding: 2rem;
+  }
+
+  #error {
+    font-size: 34px;
+  }
+
+  #status {
+    font-size: 26px;
+  }
+
+  #final {
+    font-size: 30px;
+  }
+
+  #home-link {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 768px) {
+  .err-data {
+    width: 90%;
+    padding: 1.8rem;
+    gap: 10px;
+  }
+
+  #error {
+    font-size: 28px;
+  }
+
+  #status {
+    font-size: 22px;
+  }
+
+  #final {
+    font-size: 24px;
+  }
+
+  #home-link {
+    font-size: 22px;
+    padding: 6px 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .err-data {
+    width: 95%;
+    padding: 1.4rem;
+    border-radius: 16px;
+  }
+
+  #error {
+    font-size: 22px;
+  }
+
+  #status {
+    font-size: 18px;
+  }
+
+  #final {
+    font-size: 20px;
+  }
+
+  #home-link {
+    font-size: 18px;
+    padding: 6px 12px;
+  }
+}
