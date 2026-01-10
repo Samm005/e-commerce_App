@@ -1,5 +1,5 @@
 import useFetch from "../utils/useFetch";
-import { Link } from "react-router-dom";
+import ProductItem from "./ProductItem";
 import { useDispatch, useSelector } from "react-redux";
 import { setSearchQuery, selectSearchQuery } from "../utils/searchSlice";
 import "./ProductList.css";
@@ -36,20 +36,7 @@ function ProductList() {
           <h3 className="no-results">No products found</h3>
         ) : (
           filteredData.map((product) => (
-            <Link
-              to={`/products/${product.id}`}
-              key={product.id}
-              className="product-card"
-            >
-              <img
-                src={product.thumbnail}
-                alt={product.title}
-                className="image"
-              />
-              <h3 className="title">{product.title}</h3>
-              <h3 className="category">{product.category}</h3>
-              <h3 className="price">${product.price}</h3>
-            </Link>
+            <ProductItem key={product.id} product={product} />
           ))
         )}
       </div>
