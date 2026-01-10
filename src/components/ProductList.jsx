@@ -49,7 +49,6 @@ function ProductList() {
               <h3 className="title">{product.title}</h3>
               <h3 className="category">{product.category}</h3>
               <h3 className="price">${product.price}</h3>
-              <h4 className="description">{product.description}</h4>
             </Link>
           ))
         )}
