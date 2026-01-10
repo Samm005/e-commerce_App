@@ -14,6 +14,10 @@ function ProductList() {
 
   if (error) return <h2 id="error">{error}</h2>; // If there is error
 
+  const filteredData = data.filter((product) =>
+    product.title.toLowerCase().includes(searchQuery.toLowerCase())
+  );
+
   return (
     <div className="product-list">
       <h2 id="Heading">ShoppyGlobe</h2>
@@ -28,11 +32,10 @@ function ProductList() {
       />
 
       <div className="products-grid">
-        {data
-          .filter((product) =>
-            product.title.toLowerCase().includes(searchQuery.toLowerCase())
-          )
-          .map((product) => (
+        {filteredData.length === 0 ? (
+          <h3 className="no-results">No products found</h3>
+        ) : (
+          filteredData.map((product) => (
             <Link
               to={`/products/${product.id}`}
               key={product.id}
@@ -48,7 +51,8 @@ function ProductList() {
               <h3 className="price">${product.price}</h3>
               <h4 className="description">{product.description}</h4>
             </Link>
-          ))}
+          ))
+        )}
       </div>
     </div>
   );
