@@ -4,6 +4,7 @@ import {
   incrementQuantity,
   decrementQuantity,
 } from "../utils/cartSlice";
+import "./CartItem.css";
 
 function CartItem({ item }) {
   const dispatch = useDispatch();
