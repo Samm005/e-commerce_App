@@ -1,6 +1,7 @@
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import CartItem from "./CartItem";
+import "./Cart.css";
 
 function Cart() {
   const cartItems = useSelector((state) => state.cart.items);
