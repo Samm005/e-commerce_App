@@ -16,7 +16,7 @@ function useFetch(URL) {
         }
 
         const result = await response.json();
-        setData(result.products);
+        setData(result.products ? result.products : result); //Handle both API call and a single product
       } catch (err) {
         setError(`Failed to fetch the products ${err.message}`);
       } finally {

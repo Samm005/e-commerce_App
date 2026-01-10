@@ -19,7 +19,7 @@ const approutes = createBrowserRouter([
         element: <ProductList />,
       },
       {
-        path: "/product/:id",
+        path: "/products/:id",
         element: <ProductDetail />,
       },
       {
@@ -37,8 +37,6 @@ const approutes = createBrowserRouter([
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <RouterProvider router={approutes}>
-      <App />
-    </RouterProvider>
+    <RouterProvider router={approutes} />
   </StrictMode>
 );

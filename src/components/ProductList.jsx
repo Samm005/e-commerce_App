@@ -13,10 +13,11 @@ function ProductList() {
     <div className="product-list">
       <h2 id="Heading">ShoppyGlobe</h2>
 
-      <div className="products-grid">{/*Using link so that the product is clickable*/}
+      <div className="products-grid">
+        {/*Using link so that the product is clickable*/}
         {data.map((product) => (
           <Link
-            to={`/product/${product.id}`}
+            to={`/products/${product.id}`}
             key={product.id}
             className="product-card"
           >
