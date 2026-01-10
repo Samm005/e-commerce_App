@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import useFetch from "../utils/useFetch";
 import "./ProductDetail.css";
 
@@ -11,7 +11,15 @@ function ProductDetail() {
 
   if (loading) return <h2 id="loading">Loading products....</h2>; //If loading is true
 
-  if (error) return <h2 id="error">{error}</h2>; // If there is error
+  if (error)
+    return (
+      <div className="error-container">
+        <h2 id="error">{error}</h2>
+        <Link to="/" className="home-btn">
+          Go to Home
+        </Link>
+      </div>
+    ); // If there is error
 
   if (!data || !data.id) {
     return (
