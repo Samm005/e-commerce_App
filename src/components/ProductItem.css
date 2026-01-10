@@ -29,11 +29,11 @@
 
 .add-to-cart-btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 18px rgb(24, 0, 241);
+  box-shadow: 0 5px 18px rgb(17, 0, 253);
 }
 
 .add-to-cart-btn:active {
-  transform: scale(0.96);
+  transform: scale(1.02);
 }
 
 @media (max-width: 480px) {
