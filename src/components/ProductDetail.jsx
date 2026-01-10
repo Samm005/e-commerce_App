@@ -1,5 +1,6 @@
 import { useParams } from "react-router-dom";
 import useFetch from "../utils/useFetch";
+import "./ProductDetail.css";
 
 function ProductDetail() {
   const { id } = useParams(); //Get the id from  the URL
